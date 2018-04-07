@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pigLatin</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function translatePigLatin(str) {
+
+			var vowelIndex = str.search(/[aeoiu]/g);
+			
+			if(vowelIndex == 0){
+				str += "way";
+				return str;
+			}else {
+				var first = str.substr(vowelIndex);
+				console.log(first);
+				var second = str.substring(0, vowelIndex);
+				console.log(second);
+				var third = "ay";
+				return first + second + third;
+			}
+
+			
+		}
+
+		
+
+		console.log(translatePigLatin("consonant"));
+		console.log(translatePigLatin("chonsonant"));
+		console.log(translatePigLatin("apple"));
+		console.log(translatePigLatin("algorithm"));
+		console.log(translatePigLatin("physics"));
+			</script>
+
+</body>
+</html>
